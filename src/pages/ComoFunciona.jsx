@@ -102,7 +102,7 @@ export default function ComoFunciona() {
               },
               {
                 q: '¿Puedo sellar mi pasaporte más de una vez en el mismo establecimiento?',
-                a: 'Cada establecimiento tiene un código QR mensual. Podrás registrar una visita por mes en cada parada.',
+                a: 'Sí, puedes obtener más puntos en establecimientos premium que recompensan el 100% de tu compra con puntos.',
               },
               {
                 q: '¿Los puntos se pueden usar para pagar hoteles al 100%?',
