@@ -154,12 +154,14 @@ export default function BusinessProfile() {
               </div>
             )}
 
-            {(business.phone || business.whatsapp || business.instagram) && (
+            {(business.phone || business.whatsapp || business.instagram || business.facebook || business.tiktok) && (
               <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-heading font-bold text-brand-navy text-base mb-4">Contacto</h3>
                 <div className="space-y-2">
                   {business.whatsapp && <a href={`https://wa.me/${business.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-[#25D366] text-white font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-green-500 transition-colors">💬 WhatsApp</a>}
                   {business.instagram && <a href={`https://instagram.com/${business.instagram.replace('@','')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-pink-50 text-pink-700 font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-pink-100 transition-colors">📸 Instagram</a>}
+                  {business.facebook && <a href={`https://facebook.com/${business.facebook.replace('@','')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-blue-50 text-blue-700 font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-blue-100 transition-colors">👥 Facebook</a>}
+                  {business.tiktok && <a href={`https://tiktok.com/@${business.tiktok.replace('@','')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-gray-900 text-white font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-gray-800 transition-colors">🎵 TikTok</a>}
                   {business.phone && <a href={`tel:${business.phone}`} className="flex items-center gap-2 w-full justify-center bg-gray-50 text-gray-700 font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-gray-100 transition-colors">📞 {business.phone}</a>}
                 </div>
               </div>
