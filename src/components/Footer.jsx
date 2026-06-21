@@ -9,7 +9,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <img src="/logo.png" alt="Pasaporte593" className="h-10 w-auto" />
+              <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
+                <span className="text-brand-orange font-heading font-bold text-xs">P</span>
+              </div>
+              <span className="font-heading font-bold text-white text-lg">
+                Pasaporte<span className="text-brand-orange">593</span>
+              </span>
             </div>
             <p className="font-body text-white/70 text-sm leading-relaxed">
               Red de establecimientos participantes en Ecuador. Visita, sella tu pasaporte y acumula puntos para futuros hospedajes.
