@@ -1,0 +1,24 @@
+[
+  {
+    "id": "hotel-green-9",
+    "slug": "hotel-green-9",
+    "name": "Hotel Green 9",
+    "category": "Hospedaje",
+    "city": "Same, Esmeraldas",
+    "description": "Hotel frente al mar en la playa de Same, Esmeraldas. Disfruta de sus instalaciones, sella tu pasaporte y acumula puntos BookVipPoints en cada visita.",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80",
+    "gallery": [],
+    "featured": true
+  },
+  {
+    "id": "access-ecuador",
+    "slug": "access-ecuador",
+    "name": "Access Ecuador",
+    "category": "Agencia de Viajes",
+    "city": "Quito",
+    "description": "Agencia de viajes en Quito con destinos nacionales e internacionales. Visita su oficina y sella tu Pasaporte593.",
+    "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80",
+    "gallery": [],
+    "featured": true
+  }
+]

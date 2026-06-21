@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#1A3F7A"/>
+  <text x="16" y="13" font-family="Arial" font-size="7" font-weight="bold" fill="#F97316" text-anchor="middle">PAS</text>
+  <text x="16" y="23" font-family="Arial" font-size="9" font-weight="bold" fill="white" text-anchor="middle">593</text>
+</svg>
