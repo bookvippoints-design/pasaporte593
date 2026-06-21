@@ -17,13 +17,8 @@ export default function Navbar() {
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-brand-navy flex items-center justify-center">
-            <span className="text-brand-orange font-heading font-bold text-xs leading-none">P</span>
-          </div>
-          <span className="font-heading font-bold text-brand-navy text-lg tracking-tight">
-            Pasaporte<span className="text-brand-orange">593</span>
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src="/logo.png" alt="Pasaporte593" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop links */}
