@@ -20,5 +20,49 @@
     "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80",
     "gallery": [],
     "featured": true
+  },
+  {
+    "id": "cafe-colonial",
+    "slug": "cafe-colonial",
+    "name": "Café Colonial",
+    "category": "Cafetería",
+    "city": "Quito",
+    "description": "Cafetería de especialidad en el corazón del Centro Histórico de Quito. Visítanos, disfruta un café de origen ecuatoriano y sella tu Pasaporte593.",
+    "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80",
+    "gallery": [],
+    "featured": true
+  },
+  {
+    "id": "restaurante-mar-adentro",
+    "slug": "restaurante-mar-adentro",
+    "name": "Mar Adentro",
+    "category": "Restaurante",
+    "city": "Guayaquil",
+    "description": "Restaurante de mariscos frescos en Guayaquil. Una experiencia gastronómica que también suma puntos a tu cuenta BookVipPoints.",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
+    "gallery": [],
+    "featured": true
+  },
+  {
+    "id": "gimnasio-elite-fit",
+    "slug": "gimnasio-elite-fit",
+    "name": "Elite Fit Gym",
+    "category": "Gimnasio",
+    "city": "Quito",
+    "description": "Gimnasio moderno con equipos de última generación. Cada visita que registras también cuenta como sello en tu Pasaporte593.",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80",
+    "gallery": [],
+    "featured": true
+  },
+  {
+    "id": "spa-renova",
+    "slug": "spa-renova",
+    "name": "Spa Renova",
+    "category": "Spa & Bienestar",
+    "city": "Cuenca",
+    "description": "Centro de bienestar y spa en Cuenca. Relájate, renuévate y acumula puntos BookVipPoints mientras cuidas de ti.",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80",
+    "gallery": [],
+    "featured": false
   }
 ]

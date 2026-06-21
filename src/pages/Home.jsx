@@ -53,12 +53,15 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="bg-brand-navy relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-8 left-8 text-[120px] leading-none select-none">🛂</div>
-          <div className="absolute bottom-8 right-8 text-[100px] leading-none select-none">✈️</div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[200px] leading-none select-none opacity-30">🌎</div>
+      <section className="relative overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=1600&q=80"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-brand-navy/80" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28 text-center">
