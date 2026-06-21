@@ -1,7 +1,8 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import BusinessCard from '../components/BusinessCard'
 import Footer from '../components/Footer'
-import businesses from '../data/businesses.json'
+import { supabase } from '../supabase'
 import { WA_URL, REGISTRO_URL, BVP_URL } from '../config'
 
 const HOW_STEPS = [
@@ -48,7 +49,22 @@ const BUSINESS_BENEFITS = [
 ]
 
 export default function Home() {
-  const featured = businesses.filter(b => b.featured)
+  const [businesses, setBusinesses] = useState([])
+const [loading, setLoading] = useState(true)
+
+useEffect(() => {
+  async function fetchBusinesses() {
+    const { data } = await supabase
+      .from('businesses')
+      .select('*, categories(name, icon), promotions(id, title, type, value, valid_until, active)')
+      .eq('active', true)
+      .order('created_at', { ascending: false })
+      .limit(6)
+    setBusinesses(data || [])
+    setLoading(false)
+  }
+  fetchBusinesses()
+}, [])
 
   return (
     <div>
@@ -174,11 +190,22 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featured.map(b => (
-              <BusinessCard key={b.id} business={b} />
-            ))}
-          </div>
+         {loading ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="bg-gray-100 rounded-2xl h-72 animate-pulse" />
+              ))}
+            </div>
+          ) : businesses.length === 0 ? (
+            <div className="text-center py-16">
+              <div className="text-5xl mb-4">🗺️</div>
+              <p className="font-heading font-semibold text-brand-navy text-lg">Próximamente más establecimientos</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {businesses.map(b => <BusinessCard key={b.id} business={b} />)}
+            </div>
+          )}
 
           <div className="text-center mt-10">
             <Link
