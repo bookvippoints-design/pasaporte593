@@ -45,14 +45,6 @@ export default function Footer() {
             <p className="font-body text-white/70 text-sm mb-4 leading-relaxed">
               Los puntos se acreditan en tu cuenta BookVipPoints y los usas para ahorrar en hospedajes.
             </p>
-            <a
-              href={BVP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand-orange text-white font-heading font-semibold text-sm px-4 py-2.5 rounded-xl hover:bg-orange-500 transition-colors"
-            >
-              ✈️ Ver mis puntos
-            </a>
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 import Footer from '../components/Footer'
-import { WA_URL, REGISTRO_URL } from '../config'
+import { WA_URL, REGISTRO_URL, PANEL_URL } from '../config'
 
 const BENEFITS = [
   { icon: '📋', title: 'Perfil en la red', desc: 'Tu establecimiento aparece en el directorio de Pasaporte593 con imagen, descripción y categoría.' },
@@ -66,6 +66,14 @@ export default function ForBusinesses() {
               className="w-full sm:w-auto font-heading font-bold text-base bg-brand-orange text-white px-8 py-4 rounded-2xl hover:bg-orange-500 transition-colors shadow-sm"
             >
               Quiero afiliar mi establecimiento
+            </a>
+            <a
+              href={PANEL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto font-heading font-bold text-base bg-brand-navy text-white px-8 py-4 rounded-2xl hover:bg-brand-navy/90 transition-colors shadow-sm"
+            >
+              Panel negocios
             </a>
             <a
               href={WA_URL}

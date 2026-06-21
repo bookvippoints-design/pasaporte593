@@ -51,15 +51,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="font-body text-sm font-medium text-brand-navy hover:text-brand-orange transition-colors flex items-center gap-1.5"
           >
-            ✈️ BookVipPoints
-          </a>
-          <a
-            href={PANEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-sm font-medium bg-brand-navy text-white px-4 py-2 rounded-xl hover:bg-brand-navy/90 transition-colors"
-          >
-            Panel negocios
+            ✈️ Consultar mis puntos
           </a>
         </div>
 
@@ -102,15 +94,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="font-body text-sm font-medium text-brand-navy py-2 flex items-center gap-1.5"
           >
-            ✈️ BookVipPoints
-          </a>
-          <a
-            href={PANEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-sm font-medium bg-brand-navy text-white px-4 py-2.5 rounded-xl text-center"
-          >
-            Panel negocios
+            ✈️ Consultar mis puntos
           </a>
         </div>
       )}
