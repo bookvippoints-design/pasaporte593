@@ -14,7 +14,7 @@ export default function BusinessProfile() {
     async function fetchBusiness() {
       const { data } = await supabase
         .from('businesses')
-        .select('*, categories(name, icon), business_images(url, order), promotions(id, title, description, type, value, valid_until, active)')
+        .select('*, categories(name, icon), business_images(url, order), promotions(id, title, description, type, value, valid_until, active, promotion_images(id, image_url))')
         .eq('slug', slug)
         .eq('active', true)
         .single()
@@ -107,13 +107,22 @@ export default function BusinessProfile() {
                 <h2 className="font-heading font-bold text-brand-navy text-lg mb-4">Promociones activas</h2>
                 <div className="space-y-3">
                   {activePromos.map(promo => (
-                    <div key={promo.id} className="flex items-start gap-3 bg-warm-bg rounded-xl p-4 border border-gray-100">
-                      <span className="text-xl">{promo.type === 'puntos_extra' ? '⭐' : '🏷️'}</span>
-                      <div>
-                        <p className="font-heading font-semibold text-brand-navy text-sm">{promo.title}</p>
-                        {promo.description && <p className="font-body text-gray-500 text-xs mt-0.5">{promo.description}</p>}
-                        {promo.valid_until && <p className="font-body text-gray-400 text-xs mt-1">Válido hasta: {new Date(promo.valid_until).toLocaleDateString('es-EC')}</p>}
+                    <div key={promo.id} className="bg-warm-bg rounded-xl p-4 border border-gray-100">
+                      <div className="flex items-start gap-3">
+                        <span className="text-xl">{promo.type === 'puntos_extra' ? '⭐' : '🏷️'}</span>
+                        <div className="flex-1">
+                          <p className="font-heading font-semibold text-brand-navy text-sm">{promo.title}</p>
+                          {promo.description && <p className="font-body text-gray-500 text-xs mt-0.5">{promo.description}</p>}
+                          {promo.valid_until && <p className="font-body text-gray-400 text-xs mt-1">Válido hasta: {new Date(promo.valid_until).toLocaleDateString('es-EC')}</p>}
+                        </div>
                       </div>
+                      {promo.promotion_images && promo.promotion_images.length > 0 && (
+                        <div className="flex gap-2 mt-3 flex-wrap">
+                          {promo.promotion_images.map(img => (
+                            <img key={img.id} src={img.image_url} alt="" className="w-24 h-24 object-cover rounded-xl border border-gray-200" />
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
