@@ -71,8 +71,8 @@ export default function BusinessProfile() {
   return (
     <div>
       <div className="relative h-72 md:h-96 bg-brand-navy overflow-hidden">
-        {business.image_url && <img src={business.image_url} alt={business.name} className="w-full h-full object-cover opacity-60" />}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent" />
+        {business.image_url && <img src={business.image_url} alt={business.name} className="w-full h-full object-cover" />}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 max-w-6xl mx-auto">
           <Link to="/establecimientos" className="inline-flex items-center gap-1 font-body text-white/70 text-sm hover:text-white mb-4 transition-colors">← Directorio</Link>
           <div className="flex items-center gap-3 mb-2">
