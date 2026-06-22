@@ -119,7 +119,9 @@ export default function BusinessProfile() {
                       {promo.promotion_images && promo.promotion_images.length > 0 && (
                         <div className="flex gap-2 mt-3 flex-wrap">
                           {promo.promotion_images.map(img => (
-                            <img key={img.id} src={img.image_url} alt="" className="w-24 h-24 object-cover rounded-xl border border-gray-200" />
+                            <button key={img.id} onClick={() => setLightboxIndex({ url: img.image_url })} className="hover:opacity-90 transition-opacity">
+                              <img src={img.image_url} alt="" className="w-24 h-24 object-cover rounded-xl border border-gray-200" />
+                            </button>
                           ))}
                         </div>
                       )}
@@ -188,15 +190,20 @@ export default function BusinessProfile() {
         </div>
       </section>
 
-      {lightboxIndex !== null && gallery.length > 0 && (
+      {lightboxIndex !== null && (
         <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center" onClick={closeLightbox}>
           <button className="absolute top-4 right-4 text-white/60 hover:text-white text-3xl font-light" onClick={closeLightbox}>×</button>
-          {gallery.length > 1 && <>
+          {typeof lightboxIndex === 'number' && gallery.length > 1 && <>
             <button className="absolute left-4 text-white/60 hover:text-white text-3xl px-3 py-2" onClick={e => { e.stopPropagation(); prevImage() }}>‹</button>
             <button className="absolute right-4 text-white/60 hover:text-white text-3xl px-3 py-2" onClick={e => { e.stopPropagation(); nextImage() }}>›</button>
           </>}
-          <img src={gallery[lightboxIndex]} alt="" className="max-w-[90vw] max-h-[85vh] object-contain rounded-xl" onClick={e => e.stopPropagation()} />
-          <p className="absolute bottom-4 text-white/50 text-sm">{lightboxIndex + 1} / {gallery.length}</p>
+          <img
+            src={typeof lightboxIndex === 'number' ? gallery[lightboxIndex] : lightboxIndex.url}
+            alt=""
+            className="max-w-[90vw] max-h-[85vh] object-contain rounded-xl"
+            onClick={e => e.stopPropagation()}
+          />
+          {typeof lightboxIndex === 'number' && <p className="absolute bottom-4 text-white/50 text-sm">{lightboxIndex + 1} / {gallery.length}</p>}
         </div>
       )}
 
