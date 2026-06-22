@@ -178,11 +178,6 @@ export default function BusinessProfile() {
               </div>
             )}
 
-            <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-              <h3 className="font-heading font-bold text-brand-navy text-base mb-3">¿Tienes preguntas?</h3>
-              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-[#25D366] text-white font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-green-500 transition-colors">💬 Escribir por WhatsApp</a>
-            </div>
-
             <Link to="/establecimientos" className="flex items-center justify-center gap-2 w-full bg-warm-bg text-brand-navy font-heading font-semibold text-sm px-4 py-3 rounded-xl border border-gray-200 hover:border-brand-navy transition-colors">
               ← Ver más establecimientos
             </Link>
