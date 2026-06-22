@@ -60,20 +60,20 @@ export default function ForBusinesses() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href={REGISTRO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto font-heading font-bold text-base bg-brand-orange text-white px-8 py-4 rounded-2xl hover:bg-orange-500 transition-colors shadow-sm"
-            >
-              Quiero afiliar mi establecimiento
-            </a>
-            <a
               href={PANEL_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto font-heading font-bold text-base bg-brand-navy text-white px-8 py-4 rounded-2xl hover:bg-brand-navy/90 transition-colors shadow-sm"
             >
-              Panel negocios
+              Panel de Negocios
+            </a>
+            <a
+              href="https://panel-bvpoints.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto font-heading font-bold text-base bg-brand-emerald text-white px-8 py-4 rounded-2xl hover:bg-emerald-600 transition-colors shadow-sm"
+            >
+              Pasaporte Nuevo
             </a>
             <a
               href={WA_URL}
@@ -81,7 +81,7 @@ export default function ForBusinesses() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto font-heading font-semibold text-base bg-white text-brand-navy border-2 border-brand-navy px-8 py-4 rounded-2xl hover:bg-gray-50 transition-colors"
             >
-              💬 Consultar por WhatsApp
+              💬 Quiero afiliar mi establecimiento
             </a>
           </div>
         </div>
