@@ -8,7 +8,7 @@ export default function Navbar() {
 
   const links = [
     { to: '/', label: 'Inicio' },
-    { to: '/establecimientos', label: 'Establecimientos' },
+    { to: '/establecimientos', label: 'Paradas Oficiales' },
     { to: '/como-funciona', label: 'Cómo funciona' },
     { to: '/para-negocios', label: 'Para negocios' },
   ]

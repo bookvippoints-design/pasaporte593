@@ -110,6 +110,82 @@ export default function ForBusinesses() {
         </div>
       </section>
 
+      {/* Tabla comparativa */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="font-body text-brand-orange font-semibold text-sm uppercase tracking-widest">Comparativa</span>
+            <h2 className="font-heading font-extrabold text-brand-navy text-3xl mt-2">
+              ¿Por qué Pasaporte593?
+            </h2>
+            <p className="font-body text-gray-500 text-base mt-3 max-w-xl mx-auto">
+              Un programa de fidelización diferente — orientado a experiencias, no a descuentos.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr>
+                  <th className="text-left font-heading font-bold text-gray-500 pb-4 pr-4 w-1/3">Característica</th>
+                  <th className="pb-4 px-4 w-1/4">
+                    <div className="bg-brand-navy text-white rounded-xl py-2 px-3 text-center">
+                      <p className="font-heading font-bold text-brand-orange text-xs uppercase tracking-wider mb-0.5">★ Recomendado</p>
+                      <p className="font-heading font-bold text-white text-sm">Pasaporte593</p>
+                    </div>
+                  </th>
+                  <th className="pb-4 px-4 w-1/4">
+                    <div className="bg-gray-50 rounded-xl py-2 px-3 text-center">
+                      <p className="font-heading font-bold text-gray-400 text-sm">Tarjetas de puntos tradicionales</p>
+                    </div>
+                  </th>
+                  <th className="pb-4 pl-4 w-1/4">
+                    <div className="bg-gray-50 rounded-xl py-2 px-3 text-center">
+                      <p className="font-heading font-bold text-gray-400 text-sm">Cupones y descuentos</p>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { feature: 'Recompensa al cliente', p593: '✅ Puntos para hospedajes', tradicional: '✅ Descuentos locales', cupones: '✅ Descuento único' },
+                  { feature: 'Razón mensual para volver', p593: '✅ QR se renueva cada mes', tradicional: '❌ Sin renovación', cupones: '❌ Se usa una vez' },
+                  { feature: 'Perfil digital del negocio', p593: '✅ Completo con fotos y promociones', tradicional: '❌ No incluye', cupones: '⚠️ Básico' },
+                  { feature: 'Vinculación con viajes', p593: '✅ Red BookVipPoints', tradicional: '❌ No aplica', cupones: '❌ No aplica' },
+                  { feature: 'Costo para el establecimiento', p593: '✅ $50 / año', tradicional: '⚠️ Variable', cupones: '⚠️ Por comisión' },
+                  { feature: 'Captación de clientes nuevos', p593: '✅ 100 puntos de bienvenida', tradicional: '❌ No incluye', cupones: '⚠️ Solo por descuento' },
+                  { feature: 'Imagen de marca premium', p593: '✅ Parada Oficial de la red', tradicional: '❌ Sin posicionamiento', cupones: '❌ Asociado a descuentos' },
+                ].map((row, i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-warm-bg/50' : 'bg-white'}>
+                    <td className="font-body text-gray-700 text-sm py-4 pr-4 rounded-l-xl font-medium">{row.feature}</td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="font-body text-sm font-semibold text-brand-navy">{row.p593}</span>
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="font-body text-sm text-gray-500">{row.tradicional}</span>
+                    </td>
+                    <td className="py-4 pl-4 text-center rounded-r-xl">
+                      <span className="font-body text-sm text-gray-500">{row.cupones}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="https://form.jotform.com/261601289777063"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-brand-orange text-white font-heading font-bold text-base px-8 py-4 rounded-2xl hover:bg-orange-500 transition-colors shadow-sm"
+            >
+              Quiero ser una Parada Oficial →
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   )
