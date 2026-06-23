@@ -77,6 +77,14 @@ useEffect(() => {
         />
       </section>
 
+      {/* ── FRASE ── */}
+      <section className="bg-brand-navy py-5">
+        <p className="text-center font-heading font-semibold text-white text-lg md:text-xl tracking-wide">
+          Cada visita cuenta una historia.{' '}
+          <span className="text-brand-orange">Cada sello acerca una experiencia.</span>
+        </p>
+      </section>
+
       {/* ── CÓMO FUNCIONA ── */}
       <section id="como-funciona" className="py-20 bg-warm-bg">
         <div className="max-w-6xl mx-auto px-4">
