@@ -158,12 +158,18 @@ export default function BusinessProfile() {
             {(mapsUrl || wazeUrl) && (
               <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
                 {business.lat && business.lng && (
-                  <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="block">
+                  <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="block relative">
                     <img
-                      src={`https://maps.googleapis.com/maps/api/staticmap?center=${business.lat},${business.lng}&zoom=15&size=400x200&scale=2&markers=color:0xF97316%7C${business.lat},${business.lng}&style=feature:all%7Celement:labels.text.fill%7Ccolor:0x1A3F7A&key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY`}
+                      src={`https://static-maps.yandex.ru/1.x/?lang=en_US&ll=${business.lng},${business.lat}&z=15&l=map&size=400,200&pt=${business.lng},${business.lat},pm2rdm`}
                       alt={`Ubicación de ${business.name}`}
                       className="w-full h-40 object-cover hover:opacity-90 transition-opacity"
+                      onError={e => { e.target.style.display = 'none' }}
                     />
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div className="bg-white/90 rounded-full px-3 py-1 shadow text-xs font-heading font-semibold text-brand-navy opacity-0 hover:opacity-100">
+                        Ver en mapa
+                      </div>
+                    </div>
                   </a>
                 )}
                 <div className="p-4">
