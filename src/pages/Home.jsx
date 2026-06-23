@@ -69,55 +69,12 @@ useEffect(() => {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <img
-            src="/hero-pasaporte.png"
-            alt=""
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/60 to-transparent" />
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28 w-full">
-          <div className="max-w-xl">
-            {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 font-body text-sm px-4 py-1.5 rounded-full mb-6">
-              <span>🛂</span>
-              <span>Tu pasaporte de recompensas empieza aquí</span>
-            </div>
-
-            {/* Title */}
-            <h1 className="font-heading font-extrabold text-white text-5xl md:text-7xl mb-4 tracking-tight">
-              Pasaporte<span className="text-brand-orange">593</span>
-            </h1>
-
-            {/* Tagline */}
-            <p className="font-heading font-semibold text-white/90 text-xl md:text-2xl mb-6 leading-snug">
-              Descubre establecimientos. Sella tu pasaporte. Acumula puntos y viaja.
-            </p>
-
-            {/* Support text */}
-            <p className="font-body text-white/70 text-base mb-10 leading-relaxed">
-              Visita establecimientos participantes, escanea el código QR y acumula puntos en tu cuenta BookVipPoints para utilizarlos en hoteles nacionales e internacionales.
-            </p>
-
-            {/* Stats strip */}
-            <div className="flex items-center gap-8">
-              {[
-                { value: 'QR mensual', label: 'por establecimiento' },
-                { value: 'Puntos reales', label: 'en BookVipPoints' },
-                { value: 'Hoteles', label: 'nacionales e internacionales' },
-              ].map((s, i) => (
-                <div key={i} className="text-center">
-                  <p className="font-heading font-bold text-brand-orange text-sm md:text-base">{s.value}</p>
-                  <p className="font-body text-white/50 text-xs leading-tight mt-0.5">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      <section className="w-full">
+        <img
+          src="/hero-pasaporte.png"
+          alt="Pasaporte593 — Descubre establecimientos. Sella tu pasaporte. Acumula puntos y viaja."
+          className="w-full h-auto block"
+        />
       </section>
 
       {/* ── CÓMO FUNCIONA ── */}
