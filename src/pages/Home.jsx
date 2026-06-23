@@ -69,67 +69,53 @@ useEffect(() => {
   return (
     <div>
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=1600&q=80"
+            src="/hero-pasaporte.png"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-brand-navy/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/60 to-transparent" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28 text-center">
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 font-body text-sm px-4 py-1.5 rounded-full mb-6">
-            <span>🛂</span>
-            <span>Tu pasaporte de recompensas empieza aquí</span>
-          </div>
+        <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28 w-full">
+          <div className="max-w-xl">
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 bg-white/10 text-white/90 font-body text-sm px-4 py-1.5 rounded-full mb-6">
+              <span>🛂</span>
+              <span>Tu pasaporte de recompensas empieza aquí</span>
+            </div>
 
-          {/* Title */}
-          <h1 className="font-heading font-extrabold text-white text-5xl md:text-7xl mb-4 tracking-tight">
-            Pasaporte<span className="text-brand-orange">593</span>
-          </h1>
+            {/* Title */}
+            <h1 className="font-heading font-extrabold text-white text-5xl md:text-7xl mb-4 tracking-tight">
+              Pasaporte<span className="text-brand-orange">593</span>
+            </h1>
 
-          {/* Tagline */}
-          <p className="font-heading font-semibold text-white/90 text-xl md:text-2xl mb-6 max-w-2xl mx-auto leading-snug">
-            Descubre establecimientos. Sella tu pasaporte. Acumula puntos y viaja.
-          </p>
+            {/* Tagline */}
+            <p className="font-heading font-semibold text-white/90 text-xl md:text-2xl mb-6 leading-snug">
+              Descubre establecimientos. Sella tu pasaporte. Acumula puntos y viaja.
+            </p>
 
-          {/* Support text */}
-          <p className="font-body text-white/70 text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-            Visita establecimientos participantes, escanea el código QR y acumula puntos en tu cuenta BookVipPoints para utilizarlos en hoteles nacionales e internacionales.
-          </p>
+            {/* Support text */}
+            <p className="font-body text-white/70 text-base mb-10 leading-relaxed">
+              Visita establecimientos participantes, escanea el código QR y acumula puntos en tu cuenta BookVipPoints para utilizarlos en hoteles nacionales e internacionales.
+            </p>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/como-funciona"
-              className="w-full sm:w-auto font-heading font-bold text-base bg-brand-orange text-white px-8 py-4 rounded-2xl hover:bg-orange-500 transition-colors shadow-lg"
-            >
-              Cómo funciona
-            </Link>
-            <Link
-              to="/establecimientos"
-              className="w-full sm:w-auto font-heading font-semibold text-base bg-white/10 text-white border border-white/20 px-8 py-4 rounded-2xl hover:bg-white/20 transition-colors"
-            >
-              Ver establecimientos
-            </Link>
-          </div>
-
-          {/* Stats strip */}
-          <div className="mt-14 grid grid-cols-3 gap-4 max-w-lg mx-auto">
-            {[
-              { value: 'QR mensual', label: 'por establecimiento' },
-              { value: 'Puntos reales', label: 'en BookVipPoints' },
-              { value: 'Hoteles', label: 'nacionales e internacionales' },
-            ].map((s, i) => (
-              <div key={i} className="text-center">
-                <p className="font-heading font-bold text-brand-orange text-sm md:text-base">{s.value}</p>
-                <p className="font-body text-white/50 text-xs leading-tight mt-0.5">{s.label}</p>
-              </div>
-            ))}
+            {/* Stats strip */}
+            <div className="flex items-center gap-8">
+              {[
+                { value: 'QR mensual', label: 'por establecimiento' },
+                { value: 'Puntos reales', label: 'en BookVipPoints' },
+                { value: 'Hoteles', label: 'nacionales e internacionales' },
+              ].map((s, i) => (
+                <div key={i} className="text-center">
+                  <p className="font-heading font-bold text-brand-orange text-sm md:text-base">{s.value}</p>
+                  <p className="font-body text-white/50 text-xs leading-tight mt-0.5">{s.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -329,12 +315,12 @@ useEffect(() => {
               </div>
 
               <a
-                href={REGISTRO_URL}
+                href="https://form.jotform.com/261601289777063"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-brand-orange text-white font-heading font-bold text-base px-6 py-4 rounded-2xl hover:bg-orange-500 transition-colors shadow-sm"
               >
-                Quiero afiliar mi establecimiento
+                Quiero más información
               </a>
               <p className="text-center font-body text-gray-400 text-xs mt-3">
                 También puedes escribirnos por{' '}
