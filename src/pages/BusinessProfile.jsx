@@ -156,11 +156,25 @@ export default function BusinessProfile() {
             </div>
 
             {(mapsUrl || wazeUrl) && (
-              <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                <h3 className="font-heading font-bold text-brand-navy text-base mb-4">Cómo llegar</h3>
-                <div className="space-y-2">
-                  {mapsUrl && <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-blue-50 text-blue-700 font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-blue-100 transition-colors">🗺️ Abrir en Google Maps</a>}
-                  {wazeUrl && <a href={wazeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-cyan-50 text-cyan-700 font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-cyan-100 transition-colors">🚗 Abrir en Waze</a>}
+              <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                {business.lat && business.lng && (
+                  <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="block">
+                    <img
+                      src={`https://maps.googleapis.com/maps/api/staticmap?center=${business.lat},${business.lng}&zoom=15&size=400x200&scale=2&markers=color:0xF97316%7C${business.lat},${business.lng}&style=feature:all%7Celement:labels.text.fill%7Ccolor:0x1A3F7A&key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY`}
+                      alt={`Ubicación de ${business.name}`}
+                      className="w-full h-40 object-cover hover:opacity-90 transition-opacity"
+                    />
+                  </a>
+                )}
+                <div className="p-4">
+                  <h3 className="font-heading font-bold text-brand-navy text-base mb-3">Cómo llegar</h3>
+                  {business.address && (
+                    <p className="font-body text-gray-500 text-xs mb-3">📍 {business.address}{business.city ? `, ${business.city}` : ''}</p>
+                  )}
+                  <div className="space-y-2">
+                    {mapsUrl && <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-blue-50 text-blue-700 font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-blue-100 transition-colors">🗺️ Abrir en Google Maps</a>}
+                    {wazeUrl && <a href={wazeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 w-full justify-center bg-cyan-50 text-cyan-700 font-heading font-semibold text-sm px-4 py-3 rounded-xl hover:bg-cyan-100 transition-colors">🚗 Abrir en Waze</a>}
+                  </div>
                 </div>
               </div>
             )}
